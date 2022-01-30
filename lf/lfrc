@@ -1,0 +1,3 @@
+set icons
+
+cmd icat ${{ kitty +kitten icat $fx; read }}

@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/home/arindas/source/github.com/soumik12345/Radium/src/lib'
+let g:netrw_dirhist_9='/home/arindas/source/github.com/soumik12345/Radium/src'
+let g:netrw_dirhist_8='/home/arindas/source/github.com/soumik12345/Radium'
+let g:netrw_dirhist_7='/home/arindas/source/github.com/soumik12345'
+let g:netrw_dirhist_6='/home/arindas/source/github.com/soumik12345/Radium'
+let g:netrw_dirhist_5='/home/arindas/source/github.com/soumik12345'
+let g:netrw_dirhist_4='/home/arindas/source/courses/parallel-programming-in-java/week-1/mini-project-0/miniproject_0/src/test/java/edu/coursera/parallel'
+let g:netrw_dirhist_3='/home/arindas/source/courses/parallel-programming-in-java/week-1/mini-project-0/miniproject_0/src/test/java/edu/coursera'
+let g:netrw_dirhist_2='/home/arindas/source/courses/parallel-programming-in-java/week-1/mini-project-0/miniproject_0/src/test/java/edu'
+let g:netrw_dirhist_1='/home/arindas/source/courses/parallel-programming-in-java/week-1/mini-project-0/miniproject_0/src/test/java'
