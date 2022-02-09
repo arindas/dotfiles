@@ -581,9 +581,9 @@ progressbar_look = "━━━"
 #
 #color2 = green
 #
-progressbar_color = black:b
+progressbar_color = 9
 #
-#progressbar_elapsed_color = green:b
+progressbar_elapsed_color = green
 #
 #statusbar_color = default
 #
