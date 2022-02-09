@@ -1,0 +1,11 @@
+set download-path=~/downloads/
+
+# GUI color settings
+set completion-css=color:#eeffff;background-color:#212121;font:10pt Monospace;
+set completion-hover-css=color:#eeffff;background-color:#212121;font:10pt Monospace;
+set completion-selected-css=color:#eeffff;background-color:#4a4a4a;font:10pt Monospace;
+set input-css=color:#eeffff;background-color:#212121;font:10pt DejaVu Sans Mono;
+set input-error-css=color:#ff5370;background-color:#212121;font:10pt Monospace;
+set status-css=color:#ffcb6b;background-color:#212121;font:10pt Monospace;
+set status-ssl-css=color:#c3e88d;background-color:#212121;font:10pt Monospace; 
+set status-ssl-invalid-css=color:#ff5370;background-color:#212121;font:10pt Monospace;
