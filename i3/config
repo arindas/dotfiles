@@ -239,7 +239,7 @@ bindsym $mod+Control+Return exec /usr/local/bin/st
 bindsym $mod+Mod1+Return exec /usr/bin/xfce4-terminal
 
 bindsym $mod+w exec /usr/bin/firefox
-bindsym $mod+Control+w exec /usr/bin/surf
+bindsym $mod+Control+w exec /usr/bin/vimb
 bindsym $mod+Mod1+w exec /usr/bin/microsoft-edge-stable
 
 bindsym $mod+n exec /usr/bin/thunar
