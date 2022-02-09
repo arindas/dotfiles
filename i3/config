@@ -282,7 +282,7 @@ assign [class="kitty"] $ws1
 assign [class="St"] $ws1
 assign [class="Xfce4-terminal"] $ws1
 
-assign [class="Surf"] $ws2
+assign [class="Vimb"] $ws2
 assign [class="(?i)firefox"] $ws2
 assign [class="Microsoft-edge"] $ws2
 
@@ -301,7 +301,7 @@ for_window [class=kitty] focus
 for_window [class=St] focus
 for_window [class="Xfce4-terminal"] focus
 
-for_window [class=Surf] focus
+for_window [class=Vimb] focus
 for_window [class=(?i)firefox] focus
 for_window [class=Microsoft-edge] focus
 
