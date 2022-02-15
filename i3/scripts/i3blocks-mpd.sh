@@ -27,16 +27,7 @@ song_remove_extension='
 
 song_format_program='
 {
-	l=length($0);
-	if (l > 20) {
-		printf "%s... %s ",
-			substr($0, 0, 11),
-			substr(substr($0, l-20), 0, 9)
-	} 
-	
-	else { 
-		printf "%s ", substr($0, 0, 20) 
-	} 
+    printf "%s ->  ", substr($0, 0, 10) 
 }
 '
 
@@ -44,6 +35,7 @@ mpc current |
 	sed "s/&/and/" |
 	awk -F"/" '{printf $(NF)}' |
 	awk -F"." "$song_remove_extension" |
+    awk -F"-" "$song_remove_extension" |
 	awk "$song_format_program"
 
 status=$(mpc status | sed -n 's/^\[\([^])]*\)\].*$/\1/p')
