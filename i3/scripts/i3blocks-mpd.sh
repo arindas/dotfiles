@@ -25,9 +25,14 @@ song_remove_extension='
 }
 '
 
+LENGTH=20
+
 song_format_program='
 {
-    printf "%s ->  ", substr($0, 0, 10) 
+    l=length($0)
+    idx=timestamp%l
+    rdx=idx+len-l-1
+    printf "%s %s ->  ", substr($0, idx, len), substr($0, 0, rdx)
 }
 '
 
@@ -36,7 +41,7 @@ mpc current |
 	awk -F"/" '{printf $(NF)}' |
 	awk -F"." "$song_remove_extension" |
     awk -F"-" "$song_remove_extension" |
-	awk "$song_format_program"
+    awk -v timestamp=$(date "+%s") -v len=$LENGTH "$song_format_program" 
 
 status=$(mpc status | sed -n 's/^\[\([^])]*\)\].*$/\1/p')
 case $status in
