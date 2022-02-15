@@ -22,6 +22,7 @@ song_remove_extension='{
 	printf substr($0, 0, tl-l-1)
 }'
 
+TRAIL="->"
 LENGTH=15
 
 song_format_program='{
@@ -33,16 +34,16 @@ song_format_program='{
     }
     else { printf "%s", $0 }
 
-    printf " ━  "
+    printf " %s  ", trail
 }'
 
 mpc current |
 	sed "s/&/and/" |
 	awk -F"/" '{printf $(NF)}' |
 	awk -F"." "$song_remove_extension" |
-    awk -F"-" "$song_remove_extension" |
     awk -v timestamp=$(date "+%s") \
         -v len=$LENGTH \
+        -v trail=$TRAIL \
         "$song_format_program"
 
 status=$(mpc status | sed -n 's/^\[\([^])]*\)\].*$/\1/p')
