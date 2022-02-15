@@ -18,33 +18,39 @@ playing=
 stopped=" -"
 
 song_remove_extension='{
-	l=length($(NF)); tl=length($0);
-	printf substr($0, 0, tl-l-1)
+    if (NF > 1) {
+        extension_len = length($(NF)); total_len = length($0);
+	    printf substr($0, 0, total_len - extension_len - 1)
+    }
+
+    else { printf $0 }
 }'
 
-TRAIL="->"
 LENGTH=15
+TRAIL="->"
 
-song_format_program='{
+song_name_marquee='{
     l=length($0)
 
-    if(l > len) {
+    if (l > len) {
         idx = timestamp % l; rdx = idx + len - l - 1
         printf "%s %s", substr($0, idx, len), substr($0, 0, rdx)
     }
+
     else { printf "%s", $0 }
 
     printf " %s  ", trail
 }'
 
 mpc current |
-	sed "s/&/and/" |
-	awk -F"/" '{printf $(NF)}' |
-	awk -F"." "$song_remove_extension" |
+    sed "s/&/and/" |
+    awk -F"/" '{printf $(NF)}' |
+    awk -F"." "$song_remove_extension" |
+    awk -F"-" "$song_remove_extension" |
     awk -v timestamp=$(date "+%s") \
         -v len=$LENGTH \
         -v trail=$TRAIL \
-        "$song_format_program"
+        "$song_name_marquee"
 
 status=$(mpc status | sed -n 's/^\[\([^])]*\)\].*$/\1/p')
 case $status in
