@@ -32,7 +32,7 @@ song_format_program='
     l=length($0)
     idx=timestamp%l
     rdx=idx+len-l-1
-    printf "%s %s ->  ", substr($0, idx, len), substr($0, 0, rdx)
+    printf "%s %s :  ", substr($0, idx, len), substr($0, 0, rdx)
 }
 '
 
