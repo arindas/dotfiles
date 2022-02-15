@@ -25,7 +25,7 @@ song_remove_extension='
 }
 '
 
-LENGTH=20
+LENGTH=15
 
 song_format_program='
 {
