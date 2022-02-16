@@ -4,7 +4,6 @@ exec-mpc() {
     mpc $* &> /dev/null
 }
 
-
 case $BLOCK_BUTTON in
   1) exec-mpc toggle ;;
   2) exec-mpc stop   ;;
@@ -38,19 +37,42 @@ song_name_marquee='{
     }
 
     else { printf "%s", $0 }
-
-    printf " %s  ", trail
 }'
 
-mpc current |
+song_name_truncate='{
+    l = length($0)
+
+    if (l > len) {
+        printf "%s... %s",
+            substr($0, 0, len/2), substr($0, l - len/2)
+    }
+
+    else { printf "%s", $0 }
+}'
+
+SONG_NAME=$(mpc current |
     sed "s/&/and/" |
     awk -F"/" '{printf $(NF)}' |
     awk -F"." "$song_remove_extension" |
-    awk -F"-" "$song_remove_extension" |
-    awk -v timestamp=$(date "+%s") \
-        -v len=$LENGTH \
-        -v trail=$TRAIL \
-        "$song_name_marquee"
+    awk -F"-" "$song_remove_extension")
+
+WIDE_CHAR_ABSENT=$(echo -e $SONG_NAME |
+    LANG=C sed -z '/[\x80-\xFF]/d')
+
+if [[ ! -z $WIDE_CHAR_ABSENT ]]; then
+    echo "$SONG_NAME" |
+        awk -v timestamp=$(date "+%s") \
+            -v len=$LENGTH \
+            "$song_name_marquee"
+else
+    echo "$SONG_NAME" |
+        awk -v len=$LENGTH \
+            "$song_name_truncate"
+fi
+
+if [[ ! -z "$SONG_NAME" ]]; then
+    printf " $TRAIL  ";
+fi
 
 status=$(mpc status | sed -n 's/^\[\([^])]*\)\].*$/\1/p')
 case $status in
