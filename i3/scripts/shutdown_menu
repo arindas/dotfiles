@@ -135,7 +135,7 @@ function prepare_launcher() {
     rofi_colors=(-bc "${BORDER_COLOR}" -bg "${BG_COLOR}" -fg "${FG_COLOR}" \
         -hlfg "${HLFG_COLOR}" -hlbg "${HLBG_COLOR}")
     launcher_exe="rofi"
-    launcher_options=(-font 'Monospace 9' -theme-str '#window {height: 11em; width: 8em; location: east; anchor: east;} #listview { padding: 0em;} #entry{enabled: false;}' \
+    launcher_options=(-font 'Iosevka 10' -theme-str '#window {height: 11em; width: 8em; location: east; anchor: east;} #listview { padding: 0em;} #entry{enabled: false;}' \
       -dmenu -i -lines "${menu_nrows}" -p "${ROFI_TEXT}")
   elif [[ "$1" == "zenity" ]]; then
     launcher_exe="zenity"

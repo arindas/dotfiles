@@ -17,5 +17,4 @@ esac
 
 # i3block
 DATE=$(date '+%a, %d %b %Y')
-CALI=" "
-echo "$CALI$DATE"
+echo "$DATE"
