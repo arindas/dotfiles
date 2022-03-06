@@ -338,7 +338,7 @@ exec --no-startup-id dex -a -s /etc/xdg/autostart/:~/.config/autostart/
 # exec --no-startup-id xrandr --output HDMI1 --auto --left-of eDP1
 
 # start blueberry app for managing bluetooth devices from tray:
-exec --no-startup-id blueberry-tray
+# exec --no-startup-id blueberry-tray
 
 #transparency 
 #exec --no-startup-id xcompmgr -c -C -t-5 -l-5 -r4.2 -o.55 &
@@ -398,11 +398,11 @@ set $barfg		    #eeffff
 set $unfocusedgrey  #1a1a1a
 
 # define colors for windows:
-#class		            border		bground		text			indicator		child_border
-client.focused		    $focusedgrey	$focusedgrey	$focusedgrey		$focusedgrey		$focusedgrey
-client.unfocused	    $unfocusedgrey	$unfocusedgrey	$unfocusedgrey		$unfocusedgrey		$unfocusedgrey
+# class		                border		    bground		    text			    indicator		    child_border
+client.focused		        $focusedgrey	$focusedgrey	$focusedgrey		$focusedgrey		$focusedgrey
+client.unfocused	        $unfocusedgrey	$unfocusedgrey	$unfocusedgrey		$unfocusedgrey		$unfocusedgrey
 client.focused_inactive	    $unfocusedgrey	$unfocusedgrey	$unfocusedgrey		$unfocusedgrey		$unfocusedgrey
-client.urgent		    $urgentred		$urgentred	$urgentred		$indicator		$yellowbrown
+client.urgent		        $urgentred		$urgentred	    $urgentred		    $indicator		    $yellowbrown
 
 
 ############################################
@@ -417,7 +417,7 @@ bar {
 	    output eDP1
         position bottom 
 #	    i3bar_command i3bar --transparency
-		tray_output eDP1
+		tray_output none
 		tray_padding 0
 		colors {
 		separator          $purple
@@ -444,7 +444,7 @@ bar {
 	    output HDMI1
         position bottom 
 #	    i3bar_command i3bar --transparency
-		tray_output primary
+		tray_output none
 		tray_padding 0
 		colors {
 		separator          $purple
