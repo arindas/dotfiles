@@ -327,7 +327,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id dex -a -s /etc/xdg/autostart/:~/.config/autostart/
 
 # num lock activated
-#exec --no-startup-id numlockx on
+exec --no-startup-id numlockx on
 
 # start conky: 
 #exec_always --no-startup-id conky
