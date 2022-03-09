@@ -348,7 +348,7 @@ exec --no-startup-id numlockx on
 exec --no-startup-id picom --config ~/.config/picom/picom.conf --daemon
 
 #networkmanager-applet
-exec --no-startup-id nm-applet
+# exec --no-startup-id nm-applet
 
 # set wallpaper
 exec --no-startup-id nitrogen --restore
