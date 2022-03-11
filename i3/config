@@ -417,7 +417,7 @@ bar {
 	    output eDP1
         position bottom 
 #	    i3bar_command i3bar --transparency
-		tray_output none
+		tray_output eDP1
 		tray_padding 0
 		colors {
 		separator          $purple
