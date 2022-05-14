@@ -19,6 +19,7 @@ alias ls='ls --color=auto'
 alias grep='grep --color'
 alias ncmpcpp="ncmpcpp --quiet"
 alias d="kitty +kitten diff"
+alias nvi="nvim -u NONE"
 
 # environment variables
 ZLE_RPROMPT_INDENT=0

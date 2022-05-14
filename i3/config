@@ -381,7 +381,7 @@ for_window [class="Pamac-manager"] floating enable
 ######################################
 # color settings for bar and windows #
 ######################################
- 
+
 # Define colors variables: 
 set $urgentred		#ff5370
 set $white		    #ffffff
