@@ -13,7 +13,7 @@ st.alpha: 1.0
 
 ! inner padding
 st.borderpx:          5
-st.font:         JetBrainsMono Nerd Font:style:medium:pixelsize=13
+st.font:         JetBrainsMono Nerd Font:style:medium:pixelsize=12
 
 
 ! Base16 Material Darker
