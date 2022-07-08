@@ -1,6 +1,19 @@
+# Shortcuts allow the opening of an URI built up from a named template with
+# additional parameters.
+shortcut-add duck=https://duckduckgo.com/?q=$0
+shortcut-add g=https://encrypted.google.com/search?q=$0
+
+# Set the shortcut as the default, that is the shortcut to be used if no
+# shortcut is given and the string to open is not an URI.
+shortcut-default g
+
+# Path to the default download directory. If no download directory is set,
+# download will be written into current directory. The following pattern will
+# be expanded if the download is started '~/', '~user', '$VAR' and '${VAR}'.
 set download-path=~/downloads/
 
 # GUI color settings
+# Color scheme: Material Darker
 set completion-css=color:#eeffff;background-color:#212121;font:10pt Monospace;
 set completion-hover-css=color:#eeffff;background-color:#212121;font:10pt Monospace;
 set completion-selected-css=color:#eeffff;background-color:#4a4a4a;font:10pt Monospace;
