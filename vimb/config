@@ -12,6 +12,9 @@ shortcut-default g
 # be expanded if the download is started '~/', '~user', '$VAR' and '${VAR}'.
 set download-path=~/downloads/
 
+nnoremap <C-d> :set dark-mode=on<CR>
+nnoremap <C-l> :set dark-mode=off<CR>
+
 # GUI color settings
 # Color scheme: Material Darker
 set completion-css=color:#eeffff;background-color:#212121;font:10pt Monospace;
