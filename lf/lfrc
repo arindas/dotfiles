@@ -1,3 +1,4 @@
 set icons
 
+map b ${{ clear; bat $fx; read; clear; }}
 map i ${{ w3m-img.bash $fx; read }}
