@@ -38,7 +38,7 @@ BORDER_COLOR="#222222"
 
 # Options not related to colors
 ROFI_TEXT=""
-ROFI_OPTIONS=(-width -18 -location 4 -hide-scrollbar -padding 5 -font "Noto Sans Mono CJK TC, FontAwesome 10")
+ROFI_OPTIONS=(-width -18 -location 4 -hide-scrollbar -padding 5, -font "Noto Sans Mono CJK TC 10, FontAwesome 10")
 # Zenity options
 ZENITY_TITLE="Power Menu"
 ZENITY_TEXT="Action:"
@@ -135,7 +135,7 @@ function prepare_launcher() {
     rofi_colors=(-bc "${BORDER_COLOR}" -bg "${BG_COLOR}" -fg "${FG_COLOR}" \
         -hlfg "${HLFG_COLOR}" -hlbg "${HLBG_COLOR}")
     launcher_exe="rofi"
-    launcher_options=(-font 'Iosevka 10' -theme-str '#window {height: 11em; width: 8em; location: east; anchor: east;} #listview { padding: 0em;} #entry{enabled: false;}' \
+    launcher_options=(-font 'Iosevka Nerd Font Mono 10' -theme-str '#window {height: 11em; width: 8em; location: east; anchor: east;} #listview { padding: 0em;} #entry{enabled: false;}' \
       -dmenu -i -lines "${menu_nrows}" -p "${ROFI_TEXT}")
   elif [[ "$1" == "zenity" ]]; then
     launcher_exe="zenity"
