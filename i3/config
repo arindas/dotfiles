@@ -236,6 +236,7 @@ bindsym $mod+p exec /usr/local/bin/switch-audio-port
 # terminals
 bindsym $mod+Return exec /usr/bin/xfce4-terminal
 bindsym $mod+Control+Return exec /usr/local/bin/st -e tmux
+bindsym $mod+Mod1+Return exec /usr/local/bin/st
 
 bindsym $mod+w exec /usr/bin/firefox
 bindsym $mod+Control+w exec /usr/bin/vimb
