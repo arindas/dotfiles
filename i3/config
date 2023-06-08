@@ -291,6 +291,7 @@ assign [class="Code"] $ws3
 
 assign [class="llpp"] $ws4
 assign [class="Evince"] $ws4
+assign [class="Thorium"] $ws4
 
 assign [class="Thunar"] $ws5
 
@@ -310,6 +311,7 @@ for_window [class=Code] focus
 
 for_window [class=llpp] focus
 for_window [class=Evince] focus
+for_window [class=Thorium] focus
 
 for_window [class=Thunar] focus
 
