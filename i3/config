@@ -242,6 +242,8 @@ bindsym $mod+w exec /usr/bin/firefox
 bindsym $mod+Control+w exec /usr/bin/vimb
 bindsym $mod+Mod1+w exec /usr/bin/microsoft-edge-stable
 
+bindsym $mod+m exec /usr/bin/minitube
+
 bindsym $mod+n exec /usr/bin/thunar
 
 bindsym $mod+z exec /usr/bin/code
@@ -262,7 +264,7 @@ set $ws2 "2:"
 set $ws3 "3:"
 set $ws4 "4:"
 set $ws5 "5:"
-set $ws6 "6"
+set $ws6 "6:"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
@@ -295,6 +297,8 @@ assign [class="Thorium"] $ws4
 
 assign [class="Thunar"] $ws5
 
+assign [class="Minitube"] $ws6
+
 for_window [class="jetbrains-idea" title="win0"] floating enable;
 
 # automatic set focus new window if it opens on another workspace then the current:
@@ -314,6 +318,8 @@ for_window [class=Evince] focus
 for_window [class=Thorium] focus
 
 for_window [class=Thunar] focus
+
+for_window [class=Minitube] focus
 
 #############################################
 # autostart applications/services on login: #
