@@ -1,4 +1,6 @@
 set icons
 
+set cursorpreviewfmt "\033[7m"
+
 map b ${{ clear; bat $fx; read; clear; }}
 map i ${{ w3m-img.bash $fx; read }}
