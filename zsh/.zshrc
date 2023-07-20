@@ -18,7 +18,6 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 alias ls='ls --color=auto'
 alias grep='grep --color'
 alias ncmpcpp="ncmpcpp --quiet"
-alias d="kitty +kitten diff"
 alias nvi="nvim -u NONE"
 
 # environment variables
@@ -40,6 +39,8 @@ if [ -f "${HOME}/applications/google-cloud-sdk/path.zsh.inc" ]; then . "${HOME}/
 # The next line enables shell command completion for gcloud.
 if [ -f "${HOME}/applications/google-cloud-sdk/completion.zsh.inc" ]; then . "${HOME}/applications/google-cloud-sdk/completion.zsh.inc"; fi
 
+source <(kubectl completion zsh)
+
 # enable nvm for zsh
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -59,3 +60,20 @@ bindkey  "^[[F"   end-of-line
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="${HOME}/.sdkman"
 [[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "${HOME}/.sdkman/bin/sdkman-init.sh"
+
+# >>> mamba initialize >>>
+# !! Contents within this block are managed by 'mamba init' !!
+export MAMBA_EXE="/home/arindas/.local/bin/micromamba";
+export MAMBA_ROOT_PREFIX="/home/arindas/applications/micromamba";
+__mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__mamba_setup"
+else
+    if [ -f "/home/arindas/applications/micromamba/etc/profile.d/micromamba.sh" ]; then
+        . "/home/arindas/applications/micromamba/etc/profile.d/micromamba.sh"
+    else
+        export  PATH="/home/arindas/applications/micromamba/bin:$PATH"  # extra space after export prevents interference from conda init
+    fi
+fi
+unset __mamba_setup
+# <<< mamba initialize <<<
