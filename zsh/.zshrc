@@ -77,3 +77,6 @@ else
 fi
 unset __mamba_setup
 # <<< mamba initialize <<<
+
+# opam configuration
+[[ ! -r /home/arindas/.opam/opam-init/init.zsh ]] || source /home/arindas/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
