@@ -33,12 +33,6 @@ setopt HIST_IGNORE_DUPS          # Don't record an entry that was just recorded 
 setopt SHARE_HISTORY
 setopt APPEND_HISTORY
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f "${HOME}/applications/google-cloud-sdk/path.zsh.inc" ]; then . "${HOME}/applications/google-cloud-sdk/path.zsh.inc"; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f "${HOME}/applications/google-cloud-sdk/completion.zsh.inc" ]; then . "${HOME}/applications/google-cloud-sdk/completion.zsh.inc"; fi
-
 source <(kubectl completion zsh)
 
 # enable nvm for zsh
@@ -56,6 +50,9 @@ bindkey  "^[[4~"   end-of-line
 # for normal sessions
 bindkey  "^[[H"   beginning-of-line
 bindkey  "^[[F"   end-of-line
+
+# reverse history search
+bindkey "^R" history-incremental-pattern-search-backward
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="${HOME}/.sdkman"
