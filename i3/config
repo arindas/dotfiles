@@ -32,11 +32,11 @@ workspace_layout default
 # extra options for windows: #
 ##############################
 
-default_border none
-default_floating_border none
+default_border pixel 3
+default_floating_border pixel 3
 
 # thin borders
-# hide_edge_borders both
+hide_edge_borders smart
 
 # Set inner/outer gaps
 gaps inner 8
@@ -249,7 +249,7 @@ bindsym $mod+n exec /usr/bin/thunar
 bindsym $mod+z exec /usr/bin/code
 
 bindsym $mod+x exec /usr/bin/evince
-bindsym $mod+Control+x exec /usr/bin/llpp
+bindsym $mod+Control+x exec /usr/bin/zathura
 
 bindsym Print exec --no-startup-id "scrot ~/pictures/screenshots/%Y-%m-%d-%T-screenshot.png"
 
@@ -294,6 +294,7 @@ assign [class="Code"] $ws3
 assign [class="llpp"] $ws4
 assign [class="Evince"] $ws4
 assign [class="Thorium"] $ws4
+assign [class="Zathura"] $ws4
 
 assign [class="Thunar"] $ws5
 
@@ -353,7 +354,7 @@ exec --no-startup-id numlockx on
 #exec --no-startup-id picom -CGb
 
 # picom
-exec --no-startup-id picom --config ~/.config/picom/picom.conf --daemon
+# exec --no-startup-id picom --config ~/.config/picom/picom.conf --daemon
 
 #networkmanager-applet
 # exec --no-startup-id nm-applet
